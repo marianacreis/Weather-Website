@@ -9,7 +9,9 @@ body {
 .container {
   width: 908px;
   border: 1px solid;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
   max-width: 100%;
   background: rgba(245, 245, 245, 0.56);
   border: none;
@@ -30,7 +32,7 @@ body {
 
 .city {
   color: #4a8497;
-  font-size: 40px;
+  font-size: 35px;
   margin-left: 40px;
   font-family: "Inter", sans-serif;
   font-weight: bold;
@@ -43,17 +45,113 @@ body {
 
 .text-input-form {
   background-color: rgba(88, 159, 182, 0.28);
+  color: rgba(0, 0, 0, 0.6);
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   width: 235px;
-  padding: 8px;
-  font-size: 13px;
+  padding: 9px 13px;
+  font-size: 12px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  opacity: 0.8;
 }
 
 .submit-button {
   color: #4a8497;
   background-color: rgba(88, 159, 182, 0.28);
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 8px 13px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  opacity: 0.8;
+}
+
+.main-icon {
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+}
+.current-city-weather {
+  display: flex;
+  justify-content: center;
+}
+.current-city-temp {
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+
+  color: #4a8497;
+  margin-top: -80px;
+}
+
+.current-city-units {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: #4a8497;
+
+  margin-top: -75px;
+}
+
+.current-city-info {
+  font-family: "Inter", sans-serif;
+  color: #96b6c0;
+  font-size: 18px;
+  text-align: center;
+  margin-top: -40px;
+  font-weight: 300;
+}
+.current-city-parameters {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.parameter-container {
+  width: 100px;
+  border-radius: 10px;
+  background: rgba(209, 224, 228, 0.4);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.parameter-title {
+  color: #4a8497;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  margin-bottom: -7px;
+}
+
+.parameter-info {
+  color: #96b6c0;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.week-forecast-container {
+  width: 800px;
+  border: solid black;
+  margin: 30px auto;
+}
+
+.week-forecast {
+  list-style: none;
+  display: flex;
+}
+.week-day {
+  width: 70px;
+  border: solid black;
+}
+
+.week-forecast-icon {
+  width: 30px;
+  border: solid black;
+}
+
+.week-temp {
+  width: 50px;
+
+  border: solid black;
 }
