@@ -1,17 +1,20 @@
 body {
   background: linear-gradient(
-    175deg,
-    rgb(214, 241, 249) 0%,
-    rgb(246, 248, 248) 63%
+    164deg,
+    rgb(217, 244, 252) 0%,
+    rgb(217, 244, 252) 0%,
+    rgb(237, 236, 232) 50%,
+    rgb(237, 236, 232) 73%
   );
 }
 
 .container {
-  width: 908px;
+  width: 800px;
   border: 1px solid;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 80px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   max-width: 100%;
   background: rgba(245, 245, 245, 0.56);
   border: none;
@@ -23,102 +26,106 @@ body {
 }
 
 .date {
+  width: 200px;
   color: #96b6c0;
-  font-size: 18px;
+  font-size: 15px;
   margin-top: 40px;
-  margin-left: 40px;
+  margin-left: 42px;
   font-family: "Inter", sans-serif;
+  font-weight: 300;
 }
 
 .city {
   color: #4a8497;
   font-size: 35px;
-  margin-left: 40px;
+  margin-left: 42px;
   font-family: "Inter", sans-serif;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .city-search-form {
-  margin-top: 58px;
-  margin-left: 370px;
+  margin-top: 50px;
+  margin-left: 220px;
+  width: 800;
 }
 
 .text-input-form {
-  background-color: rgba(88, 159, 182, 0.28);
-  color: rgba(0, 0, 0, 0.6);
-  border: none;
+  color: #4a8497;
+  background-color: white;
+  border: 0.5px solid rgba(88, 159, 182, 0.28);
   border-radius: 8px;
   width: 235px;
-  padding: 9px 13px;
+  padding: 10px 13px;
   font-size: 12px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   opacity: 0.8;
 }
 
 .submit-button {
-  color: #4a8497;
-  background-color: rgba(88, 159, 182, 0.28);
+  color: #f0f1f0;
+  background-color: #4a8497;
   border: none;
   border-radius: 8px;
-  padding: 8px 13px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 13px;
   opacity: 0.8;
 }
 
 .main-icon {
-  width: 300px;
+  width: 270px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: -50px;
 }
+
 .current-city-weather {
   display: flex;
   justify-content: center;
 }
+
 .current-city-temp {
   font-family: "Inter", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-
+  font-size: 35px;
+  font-weight: 500;
   color: #4a8497;
-  margin-top: -80px;
+  margin-top: -75px;
 }
 
 .current-city-units {
   font-family: "Inter", sans-serif;
   font-size: 20px;
   color: #4a8497;
-
-  margin-top: -75px;
+  margin-top: -70px;
 }
 
 .current-city-info {
   font-family: "Inter", sans-serif;
   color: #96b6c0;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   margin-top: -40px;
   font-weight: 300;
 }
+
 .current-city-parameters {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   justify-content: center;
 }
 
 .parameter-container {
-  width: 100px;
+  width: 120px;
   border-radius: 10px;
   background: rgba(209, 224, 228, 0.4);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .parameter-title {
   color: #4a8497;
   text-align: center;
   font-family: "Inter", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   margin-bottom: -7px;
 }
 
@@ -126,32 +133,66 @@ body {
   color: #96b6c0;
   text-align: center;
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 300;
 }
 
 .week-forecast-container {
-  width: 800px;
-  border: solid black;
+  width: 700px;
   margin: 30px auto;
+  border-radius: 10px;
+  opacity: 0.8;
+  background: rgba(88, 159, 182, 0.28);
+  padding: 50px 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .week-forecast {
   list-style: none;
   display: flex;
+  padding: 0;
+  justify-content: space-around;
 }
 .week-day {
-  width: 70px;
-  border: solid black;
+  width: 100px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: #4a8497;
+  font-weight: 300;
+  margin-top: 5px;
 }
 
 .week-forecast-icon {
   width: 30px;
-  border: solid black;
+  margin-left: -30px;
 }
 
 .week-temp {
-  width: 50px;
+  width: 65px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: #4a8497;
+  font-weight: 300;
+  text-align: right;
+  margin-top: 5px;
+}
 
-  border: solid black;
+.line {
+  border: 0.3px solid #ecf2f3d2;
+  width: 600px;
+  margin-top: -7px;
+  margin-bottom: -7px;
+}
+
+footer {
+  color: #4a8497;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.footer-links {
+  text-decoration: none;
+  color: #4a8497;
 }
