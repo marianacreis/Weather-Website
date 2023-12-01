@@ -18,7 +18,7 @@
     <div class="container">
       <div class="header">
         <div class="header-text">
-          <div class="date">Friday, 12 February</div>
+          <div class="date" id="date"></div>
           <div class="city" id="city"></div>
         </div>
         <form class="city-search-form" id="city-search-form">
@@ -35,39 +35,36 @@
         </form>
       </div>
 
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/149/original/cloudy.png?1701105835"
-        class="main-icon"
-      />
+      <div id="main-icon" class="main-icon"></div>
       <div class="current-city-weather">
         <p class="current-city-temp" id="current-city-temp"></p>
         <p class="current-city-units">ºC|F</p>
       </div>
-      <p class="current-city-info">Clear</p>
+      <p class="current-city-description" id="current-city-description"></p>
 
       <div class="current-city-parameters">
         <div class="parameter-container">
           <p class="parameter-title">WIND</p>
-          <p class="parameter-info">4 MPH</p>
+          <p class="parameter-info" id="wind"></p>
         </div>
         <div class="parameter-container">
           <p class="parameter-title">HUMIDITY</p>
-          <p class="parameter-info">88%</p>
+          <p class="parameter-info" id="humidity"></p>
         </div>
         <div class="parameter-container">
           <p class="parameter-title">MAX</p>
-          <p class="parameter-info">12ºC</p>
+          <p class="parameter-info" id="max-temp">12ºC</p>
         </div>
         <div class="parameter-container">
           <p class="parameter-title">MIN</p>
-          <p class="parameter-info">5ºC</p>
+          <p class="parameter-info" id="min-temp">5ºC</p>
         </div>
       </div>
 
       <div class="week-forecast-container">
         <hr class="line" />
         <ul class="week-forecast">
-          <li class="week-day">SATURDAY</li>
+          <li class="week-day" id="day-1">SATURDAY</li>
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/711/original/clear-sky-day.png?1700660394"
             class="week-forecast-icon"
