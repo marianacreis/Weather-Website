@@ -26,6 +26,8 @@ function refreshWeather(response) {
   minTempElement.innerHTML = `${Math.round(minTemp)}ºC`;
   mainIcon.innerHTML = `<img src="${response.data.daily[0].condition.icon_url}" class="main-icon" />`;
 
+  let weekDay1Element = document.querySelector("#weekday-1");
+
   console.log(response.data);
 }
 

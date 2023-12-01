@@ -70,11 +70,11 @@ body {
 }
 
 .main-icon {
-  width: 270px;
+  width: 250px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -50px;
+  margin-top: -30px;
 }
 
 .current-city-weather {
@@ -87,14 +87,14 @@ body {
   font-size: 35px;
   font-weight: 500;
   color: #4a8497;
-  margin-top: -75px;
+  margin-top: -50px;
 }
 
 .current-city-units {
   font-family: "Inter", sans-serif;
   font-size: 20px;
   color: #4a8497;
-  margin-top: -70px;
+  margin-top: -48px;
 }
 
 .current-city-description {
@@ -102,7 +102,7 @@ body {
   color: #96b6c0;
   font-size: 16px;
   text-align: center;
-  margin-top: -40px;
+  margin-top: -38px;
   font-weight: 300;
 }
 
