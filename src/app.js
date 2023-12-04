@@ -74,15 +74,9 @@ function updateCityName(event) {
   searchCity(textInput.value);
 }
 
-function getForecast(city) {
-  let apiKey = "dd09922bof9dfbd100daf3a044cat44d";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(displayForecast);
-}
-
-function displayForecast(response) {
-  let weekDays = [
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -92,20 +86,38 @@ function displayForecast(response) {
     "Saturday",
   ];
 
+  return days[date.getDay()];
+}
+
+function getForecast(city) {
+  let apiKey = "dd09922bof9dfbd100daf3a044cat44d";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecastHTML = "";
 
-  weekDays.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<hr class="line" />
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<hr class="line" />
         <ul class="week-forecast">
-          <li class="week-day">${day}</li>
+          <li class="week-day">${formatDay(day.time)}</li>
           <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/711/original/clear-sky-day.png?1700660394"
+            src="${day.condition.icon_url}"
             class="week-forecast-icon"
           />
-          <li class="week-temp">10º | 15º</li>
+          <li class="week-temp">
+          <span class="week-temp">
+          ${Math.round(day.temperature.maximum)}º |
+            <span class="week-temp">${Math.round(day.temperature.minimum)}º</li>
         </ul>`;
+    }
   });
 
   let forecastElement = document.querySelector("#week-forecast-container");
