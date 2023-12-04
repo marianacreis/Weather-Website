@@ -25,10 +25,6 @@ function refreshWeather(response) {
   maxTempElement.innerHTML = `${Math.round(maxTemp)}ºC`;
   minTempElement.innerHTML = `${Math.round(minTemp)}ºC`;
   mainIcon.innerHTML = `<img src="${response.data.daily[0].condition.icon_url}" class="main-icon" />`;
-
-  let weekDay1Element = document.querySelector("#weekday-1");
-
-  console.log(response.data);
 }
 
 function formatDate(date) {
@@ -76,7 +72,39 @@ function updateCityName(event) {
   searchCity(textInput.value);
 }
 
+function displayForecast() {
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let forecastHTML = "";
+
+  weekDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<hr class="line" />
+        <ul class="week-forecast">
+          <li class="week-day">${day}</li>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/711/original/clear-sky-day.png?1700660394"
+            class="week-forecast-icon"
+          />
+          <li class="week-temp">10º | 15º</li>
+        </ul>`;
+  });
+
+  let forecastElement = document.querySelector("#week-forecast-container");
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let searchInput = document.querySelector("#city-search-form");
 searchInput.addEventListener("submit", updateCityName);
 
 searchCity("Porto");
+displayForecast();
