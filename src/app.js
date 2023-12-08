@@ -105,17 +105,17 @@ function displayForecast(response) {
     if (index > 0 && index < 7) {
       forecastHTML =
         forecastHTML +
-        `<hr class="line" />
-        <ul class="week-forecast">
+        ` <ul class="week-forecast">
           <li class="week-day">${formatDay(day.time)}</li>
-          <img
+          <li><img
             src="${day.condition.icon_url}"
             class="week-forecast-icon"
-          />
+          /></li>
           <li class="week-temp">
-          <span class="week-temp">
-          ${Math.round(day.temperature.maximum)}º |
-            <span class="week-temp">${Math.round(day.temperature.minimum)}º</li>
+            <span class="week-temp">
+            ${Math.round(day.temperature.maximum)}º |
+            <span class="week-temp">${Math.round(day.temperature.minimum)}º
+          </li>
         </ul>`;
     }
   });
